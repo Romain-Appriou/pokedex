@@ -1,0 +1,284 @@
+body {
+    background-color: #C14041;
+    font-family: 'Bree Serif', serif;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #EFE3E3;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #C14041;
+    padding: .5rem;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+
+h3 {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+h4 {
+    color: white;
+    font-size: 1.3rem;
+}
+
+a {
+    color: #C14041;
+    text-decoration: none;
+    padding: 0.3rem;
+}
+
+.pokemonDetails > a {
+    color: white;
+}
+
+.container {
+    margin: 1rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pokemonDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.details {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.details img {
+    margin: 1rem;
+}
+
+
+
+.description {
+    background-color: #982C2C;
+    margin-top: 1rem;
+    border-radius: 20px;
+    width: 60%;
+    padding: 1rem;
+    color: white;
+}
+
+aside {
+    width: 100%;
+}
+
+aside a {
+    color: white;
+}
+
+aside ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+a >li{
+    background-color: #982C2C;
+    margin-top: 1rem;
+    border-radius: 20px;
+    max-width: 432px;
+    max-height: 485px;
+}
+
+aside ul li {
+    padding: .8rem .4rem; 
+    border-radius: 5px;
+    margin-right: .5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+li > p {
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+li > img {
+    padding: 1rem;
+}
+
+.types, .stats {
+    display: flex;
+    flex-direction: row;
+}
+
+.statsList {
+    width: 100%;
+}
+
+.stats {
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.type, .typeListElement {
+    padding: .8rem .4rem; 
+    border-radius: 5px;
+    margin-right: .5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.typeList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.typeListElement {
+    width: 226px;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border: solid 1px white;
+}
+
+.typeListElement > li {
+    background-color: inherit;
+    margin-top: 0;
+}
+
+.carac {
+    width: 10%;
+}
+
+.caracResult {
+    width: 10%;
+}
+
+.progressLi {
+    width: 70%;
+}
+
+progress {
+    width: 100%;
+    height: 2rem;
+    
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: white;
+    border-radius: 10px;
+  }
+  progress[value]::-webkit-progress-bar {
+    background-color: #632C2B;
+    border-radius: 10px;
+  }
+
+aside {
+    width: 100%;
+}
+
+.arrows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.pokemonEvolutions {
+    display: flex;
+}
+
+li > img {
+    padding: 0;
+}
+.pokemonEvolPicture {
+    width: 70%;
+}
+
+
+@media (max-width:914px) {
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container {
+        width: 432px;
+}
+
+    .typeListElement {
+        width: 100%;
+    }
+
+    .details {
+        flex-direction: column;
+    }
+
+    .description {
+        width: 92%;
+    }
+
+    .carac {
+        width: 25%;
+    }
+}
+
+@media (min-width:915px) and (max-width:1369px) {
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container {
+        width: 900px;
+}
+
+.typeListElement {
+    width: 258px;
+}
+}
+
+@media (min-width: 1370px) {
+    
+    body {
+        display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    
+    .container {
+        width: 1340px;
+    }
+
+    .details {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
