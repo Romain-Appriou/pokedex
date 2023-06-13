@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Client :  localhost:3306
--- Généré le :  Lun 24 Décembre 2018 à 17:05
--- Version du serveur :  5.7.24-0ubuntu0.18.04.1
--- Version de PHP :  7.1.25-1+ubuntu18.04.1+deb.sury.org+1
+-- Hôte : localhost:8889
+-- Généré le : mar. 13 juin 2023 à 08:16
+-- Version du serveur :  5.7.34
+-- Version de PHP : 7.4.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,8 +18,269 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `pokedex`
+-- Base de données : `pokedex`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `evolutions`
+--
+
+CREATE TABLE `evolutions` (
+  `pokemonnumber` int(11) NOT NULL,
+  `evol1` int(11) NOT NULL,
+  `evol2` int(11) DEFAULT NULL,
+  `evol3` int(11) DEFAULT NULL,
+  `evol4` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `evolutions`
+--
+
+INSERT INTO `evolutions` (`pokemonnumber`, `evol1`, `evol2`, `evol3`, `evol4`) VALUES
+(1, 1, 2, 3, NULL),
+(2, 1, 2, 3, NULL),
+(3, 1, 2, 3, NULL),
+(4, 4, 5, 6, NULL),
+(5, 4, 5, 6, NULL),
+(6, 4, 5, 6, NULL),
+(7, 7, 8, 9, NULL),
+(8, 7, 8, 9, NULL),
+(9, 7, 8, 9, NULL),
+(10, 10, 11, 12, NULL),
+(11, 10, 11, 12, NULL),
+(12, 10, 11, 12, NULL),
+(13, 13, 14, 15, NULL),
+(14, 13, 14, 15, NULL),
+(15, 13, 14, 15, NULL),
+(16, 16, 17, 18, NULL),
+(17, 16, 17, 18, NULL),
+(18, 16, 17, 18, NULL),
+(19, 19, 20, NULL, NULL),
+(20, 19, 20, NULL, NULL),
+(21, 21, 22, NULL, NULL),
+(22, 21, 22, NULL, NULL),
+(23, 23, 24, NULL, NULL),
+(24, 23, 24, NULL, NULL),
+(25, 25, 26, NULL, NULL),
+(26, 25, 26, NULL, NULL),
+(27, 27, 28, NULL, NULL),
+(28, 27, 28, NULL, NULL),
+(29, 29, 30, 31, NULL),
+(30, 29, 30, 31, NULL),
+(31, 29, 30, 31, NULL),
+(32, 32, 33, 34, NULL),
+(33, 32, 33, 34, NULL),
+(34, 32, 33, 34, NULL),
+(35, 35, 36, NULL, NULL),
+(36, 35, 36, NULL, NULL),
+(37, 37, 38, NULL, NULL),
+(38, 37, 38, NULL, NULL),
+(39, 39, 40, NULL, NULL),
+(40, 39, 40, NULL, NULL),
+(41, 41, 42, NULL, NULL),
+(42, 41, 42, NULL, NULL),
+(43, 43, 44, 45, NULL),
+(44, 43, 44, 45, NULL),
+(45, 43, 44, 45, NULL),
+(46, 46, 47, NULL, NULL),
+(47, 46, 47, NULL, NULL),
+(48, 48, 49, NULL, NULL),
+(49, 48, 49, NULL, NULL),
+(50, 50, 51, NULL, NULL),
+(51, 50, 51, NULL, NULL),
+(52, 52, 53, NULL, NULL),
+(53, 52, 53, NULL, NULL),
+(54, 54, 55, NULL, NULL),
+(55, 54, 55, NULL, NULL),
+(56, 56, 57, NULL, NULL),
+(57, 56, 57, NULL, NULL),
+(58, 58, 59, NULL, NULL),
+(59, 58, 59, NULL, NULL),
+(60, 60, 61, 62, NULL),
+(61, 60, 61, 62, NULL),
+(62, 60, 61, 62, NULL),
+(63, 63, 64, 65, NULL),
+(64, 63, 64, 65, NULL),
+(65, 63, 64, 65, NULL),
+(66, 66, 67, 68, NULL),
+(67, 66, 67, 68, NULL),
+(68, 66, 67, 68, NULL),
+(69, 69, 70, 71, NULL),
+(70, 69, 70, 71, NULL),
+(71, 69, 70, 71, NULL),
+(72, 72, 73, NULL, NULL),
+(73, 72, 73, NULL, NULL),
+(74, 74, 75, 76, NULL),
+(75, 74, 75, 76, NULL),
+(76, 74, 75, 76, NULL),
+(77, 77, 78, NULL, NULL),
+(78, 77, 78, NULL, NULL),
+(79, 79, 80, NULL, NULL),
+(80, 79, 80, NULL, NULL),
+(81, 81, 82, NULL, NULL),
+(82, 81, 82, NULL, NULL),
+(83, 83, NULL, NULL, NULL),
+(84, 84, 85, NULL, NULL),
+(85, 84, 85, NULL, NULL),
+(86, 86, 87, NULL, NULL),
+(87, 86, 87, NULL, NULL),
+(88, 88, 89, NULL, NULL),
+(89, 88, 89, NULL, NULL),
+(90, 90, 91, NULL, NULL),
+(91, 90, 91, NULL, NULL),
+(92, 92, 93, 94, NULL),
+(93, 92, 93, 94, NULL),
+(94, 92, 93, 94, NULL),
+(95, 95, NULL, NULL, NULL),
+(96, 96, 97, NULL, NULL),
+(97, 96, 97, NULL, NULL),
+(98, 98, 99, NULL, NULL),
+(99, 98, 99, NULL, NULL),
+(100, 100, 101, NULL, NULL),
+(101, 100, 101, NULL, NULL),
+(102, 102, 103, NULL, NULL),
+(103, 102, 103, NULL, NULL),
+(104, 104, 105, NULL, NULL),
+(105, 104, 105, NULL, NULL),
+(106, 106, NULL, NULL, NULL),
+(107, 107, NULL, NULL, NULL),
+(108, 108, NULL, NULL, NULL),
+(109, 109, 110, NULL, NULL),
+(110, 109, 110, NULL, NULL),
+(111, 111, 112, NULL, NULL),
+(112, 111, 112, NULL, NULL),
+(113, 113, NULL, NULL, NULL),
+(114, 114, NULL, NULL, NULL),
+(115, 115, NULL, NULL, NULL),
+(116, 116, 117, NULL, NULL),
+(117, 116, 117, NULL, NULL),
+(118, 118, 119, NULL, NULL),
+(119, 118, 119, NULL, NULL),
+(120, 120, 121, NULL, NULL),
+(121, 120, 121, NULL, NULL),
+(122, 122, NULL, NULL, NULL),
+(123, 123, NULL, NULL, NULL),
+(124, 124, NULL, NULL, NULL),
+(125, 125, NULL, NULL, NULL),
+(126, 126, NULL, NULL, NULL),
+(127, 127, NULL, NULL, NULL),
+(128, 128, NULL, NULL, NULL),
+(129, 129, 130, NULL, NULL),
+(130, 129, 130, NULL, NULL),
+(131, 131, NULL, NULL, NULL),
+(132, 132, NULL, NULL, NULL),
+(133, 133, 134, 135, 136),
+(134, 133, 134, NULL, NULL),
+(135, 133, 135, NULL, NULL),
+(136, 133, 136, NULL, NULL),
+(137, 137, NULL, NULL, NULL),
+(138, 138, 139, NULL, NULL),
+(139, 138, 139, NULL, NULL),
+(140, 140, 141, NULL, NULL),
+(141, 140, 141, NULL, NULL),
+(142, 142, NULL, NULL, NULL),
+(143, 143, NULL, NULL, NULL),
+(144, 144, NULL, NULL, NULL),
+(145, 145, NULL, NULL, NULL),
+(146, 146, NULL, NULL, NULL),
+(147, 147, 148, 149, NULL),
+(148, 147, 148, 149, NULL),
+(149, 147, 148, 149, NULL),
+(150, 150, NULL, NULL, NULL),
+(151, 151, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `evolveIn`
+--
+
+CREATE TABLE `evolveIn` (
+  `poknumber` int(11) NOT NULL,
+  `pokevolved` int(11) NOT NULL,
+  `lvl` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `evolveIn`
+--
+
+INSERT INTO `evolveIn` (`poknumber`, `pokevolved`, `lvl`) VALUES
+(1, 2, 16),
+(2, 3, 32),
+(4, 5, 16),
+(5, 6, 36),
+(7, 8, 16),
+(8, 9, 36),
+(10, 11, 7),
+(11, 12, 10),
+(13, 14, 7),
+(14, 15, 10),
+(16, 17, 18),
+(17, 18, 36),
+(19, 20, 20),
+(21, 22, 20),
+(23, 24, 22),
+(25, 26, -3),
+(27, 28, 22),
+(29, 30, 16),
+(30, 31, -1),
+(32, 33, 16),
+(33, 34, -1),
+(35, 36, -1),
+(37, 38, -4),
+(39, 40, -1),
+(41, 42, 22),
+(43, 44, 21),
+(44, 45, -5),
+(46, 47, 24),
+(48, 49, 31),
+(50, 51, 26),
+(52, 53, 28),
+(54, 55, 33),
+(56, 57, 28),
+(58, 59, -4),
+(60, 61, 25),
+(61, 62, -6),
+(63, 64, 16),
+(64, 65, -2),
+(66, 67, 28),
+(67, 68, -2),
+(69, 70, 21),
+(70, 71, -5),
+(72, 73, 30),
+(74, 75, 25),
+(75, 76, -2),
+(77, 78, 40),
+(79, 80, 37),
+(81, 82, 30),
+(84, 85, 31),
+(86, 87, 34),
+(88, 89, 38),
+(90, 91, -6),
+(92, 93, 25),
+(93, 94, -2),
+(96, 97, 26),
+(98, 99, 28),
+(100, 101, 30),
+(102, 103, -5),
+(104, 105, 28),
+(109, 110, 35),
+(111, 112, 42),
+(116, 117, 32),
+(118, 119, 33),
+(120, 121, -6),
+(129, 130, 20),
+(133, 134, -6),
+(133, 135, -3),
+(133, 136, -4),
+(138, 139, 40),
+(140, 141, 40),
+(147, 148, 30),
+(148, 149, 55);
 
 -- --------------------------------------------------------
 
@@ -39,7 +301,7 @@ CREATE TABLE `pokemon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `pokemon`
+-- Déchargement des données de la table `pokemon`
 --
 
 INSERT INTO `pokemon` (`id`, `name`, `hp`, `attack`, `defense`, `spe_attack`, `spe_defense`, `speed`, `number`) VALUES
@@ -208,7 +470,7 @@ CREATE TABLE `pokemon_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `pokemon_type`
+-- Déchargement des données de la table `pokemon_type`
 --
 
 INSERT INTO `pokemon_type` (`id`, `pokemon_number`, `type_id`) VALUES
@@ -441,7 +703,7 @@ CREATE TABLE `type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `type`
+-- Déchargement des données de la table `type`
 --
 
 INSERT INTO `type` (`id`, `name`, `color`) VALUES
@@ -464,8 +726,20 @@ INSERT INTO `type` (`id`, `name`, `color`) VALUES
 (17, 'Vol', '6699ff');
 
 --
--- Index pour les tables exportées
+-- Index pour les tables déchargées
 --
+
+--
+-- Index pour la table `evolutions`
+--
+ALTER TABLE `evolutions`
+  ADD PRIMARY KEY (`pokemonnumber`);
+
+--
+-- Index pour la table `evolveIn`
+--
+ALTER TABLE `evolveIn`
+  ADD PRIMARY KEY (`pokevolved`);
 
 --
 -- Index pour la table `pokemon`
@@ -490,26 +764,35 @@ ALTER TABLE `type`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- AUTO_INCREMENT pour les tables déchargées
 --
+
+--
+-- AUTO_INCREMENT pour la table `evolutions`
+--
+ALTER TABLE `evolutions`
+  MODIFY `pokemonnumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
 
 --
 -- AUTO_INCREMENT pour la table `pokemon`
 --
 ALTER TABLE `pokemon`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1360;
+
 --
 -- AUTO_INCREMENT pour la table `pokemon_type`
 --
 ALTER TABLE `pokemon_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=646;
+
 --
 -- AUTO_INCREMENT pour la table `type`
 --
 ALTER TABLE `type`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
 --
--- Contraintes pour les tables exportées
+-- Contraintes pour les tables déchargées
 --
 
 --
@@ -518,6 +801,7 @@ ALTER TABLE `type`
 ALTER TABLE `pokemon_type`
   ADD CONSTRAINT `pokemon_type_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `type` (`id`),
   ADD CONSTRAINT `pokemon_type_ibfk_2` FOREIGN KEY (`pokemon_number`) REFERENCES `pokemon` (`number`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
